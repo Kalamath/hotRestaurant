@@ -8,6 +8,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+
+//puts into empty array
+app.post("/api/characters", function(req, res) {
+
+
+var newReservation = req.body;
+
+
+// newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
+
+console.log(newReservation);
+
+reservatios.push(newReservation);
+
+res.json(newReservation);
+});
+
 app.listen(PORT, function() {
 console.log("App listening on PORT " + PORT);
 });
