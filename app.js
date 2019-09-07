@@ -20,7 +20,7 @@ var newReservation = req.body;
 
 console.log(newReservation);
 
-reservatios.push(newReservation);
+reservations.push(newReservation);
 
 res.json(newReservation);
 });
