@@ -9,6 +9,16 @@ app.use(express.json());
 
 let reservations = [];
 
+var tableData = require("./data/tableData");
+var waitListData = require("./data/waitingListData");
+
+app.get("/api/tables", function(req, res) {
+  res.json(tableData);
+});
+
+app.get("/api/waitlist", function(req, res) {
+  res.json(waitListData);
+})
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "viewTable.html"));
