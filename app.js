@@ -19,13 +19,13 @@ app.get("/", function(req, res) {
   });
   
   // Displays all reservations
-  app.get("/api/reservations", function(req, res) {
+  app.get("/api/tables", function(req, res) {
     return res.json(reservations);
   });
 
 
 //puts into empty array
-app.post("/api/reservations", function(req, res) {
+app.post("/api/tables", function(req, res) {
 
 
 var newReservation = req.body;
