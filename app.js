@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 //puts into empty array
-app.post("/api/characters", function(req, res) {
+app.post("/api/reservations", function(req, res) {
 
 
 var newReservation = req.body;
